@@ -103,8 +103,6 @@
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
     <Content Include="Views\Kontekst\Index.cshtml" />
-    <Content Include="Views\Kontekst\QueryPodaci.cshtml" />
-    <Content Include="Views\Kontekst\RoutePodaci.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
