@@ -11,7 +11,7 @@ namespace HelloWorld.Controllers
         // GET: PozdravSvijete
         public ActionResult Index()
         {
-            string model = "Pozdrav svijete iz MVC-a!";
+            string model = "Pozdrav svijete iz MVC-a! Kako ste? ";
             return View((object)model);
         }
     }
