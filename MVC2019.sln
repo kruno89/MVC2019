@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCprojekt2_1_vj", "MVCproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCprojekt3_1_vj", "MVCprojekt3_1_vj\MVCprojekt3_1_vj.csproj", "{408D291E-82DD-4114-9298-ECAD62B7D4F7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modeli", "Modeli\Modeli.csproj", "{DD3EE4A4-230F-4843-8E88-4C7F6B6629A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{408D291E-82DD-4114-9298-ECAD62B7D4F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{408D291E-82DD-4114-9298-ECAD62B7D4F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{408D291E-82DD-4114-9298-ECAD62B7D4F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD3EE4A4-230F-4843-8E88-4C7F6B6629A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD3EE4A4-230F-4843-8E88-4C7F6B6629A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD3EE4A4-230F-4843-8E88-4C7F6B6629A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD3EE4A4-230F-4843-8E88-4C7F6B6629A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
