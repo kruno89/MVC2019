@@ -9,12 +9,14 @@ namespace Modeli.Controllers
 {
     public class OsobeController : Controller
     {
-        // GET: Osobe
+        // GET: Osobe/PopuniOsobu
         public ViewResult PopuniOsobu()
         {
             return View();
         }
 
+
+        // Osobe/PrikaziOsobu
         [HttpPost]
         public ViewResult PrikaziOsobu(Osoba osoba)
         {
