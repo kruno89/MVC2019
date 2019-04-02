@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCprojekt4_2_vj", "MVCproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC projekt 5_3_vj", "MVC projekt 5_3_vj\MVC projekt 5_3_vj.csproj", "{98CFD7DA-C79F-4643-997C-55E30645D67B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pogledi", "Pogledi\Pogledi.csproj", "{50B67E3C-2650-4E87-9AD7-4833D2A2AE24}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{98CFD7DA-C79F-4643-997C-55E30645D67B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98CFD7DA-C79F-4643-997C-55E30645D67B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98CFD7DA-C79F-4643-997C-55E30645D67B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50B67E3C-2650-4E87-9AD7-4833D2A2AE24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50B67E3C-2650-4E87-9AD7-4833D2A2AE24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50B67E3C-2650-4E87-9AD7-4833D2A2AE24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50B67E3C-2650-4E87-9AD7-4833D2A2AE24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
