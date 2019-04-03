@@ -1,0 +1,53 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>OsnovniHelperi</title>
+    <style>
+        div{
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div> 
+        @Html.CheckBox("chk1", true) CheckBox
+    </div>
+
+    <div>
+        @Html.RadioButton("rbu", "rbu1", true) RadioButton 1
+        <br />
+        @Html.RadioButton("rbu", "rbu2", false) RadioButton 2
+    </div>
+
+    <div>
+        @Html.Hidden("hid1", "tekst")
+    </div>
+
+    <div>
+        @Html.Password("pas1", "tekst")
+    </div>
+
+    <div>
+        @Html.TextBox("txt1", "tekst")
+    </div>
+
+    <div>
+        @Html.TextArea("tar1", "tekst", 10, 15, null)
+    </div>
+
+    <div>
+        @Html.DropDownList("ddl1", new SelectList(new [] {"Muško", "Žensko"}), "--Odaberi Spol--")
+    </div>
+
+    <div>
+        @Html.ListBox("lb1",  new  MultiSelectList(new  [] {"Jabuka", "Kruška", "Banana" }))
+    </div>
+</body>
+</html>
