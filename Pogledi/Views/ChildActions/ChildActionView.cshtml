@@ -1,0 +1,25 @@
+﻿@model string[]
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ChildActionView</title>
+</head>
+<body>
+    <div> 
+        @foreach (var item in Model)
+        {
+            @item@:&nbsp;-&nbsp;@Html.TextBox(@item, @item + " x")
+        @Html.Action("OdrediGrupuProizvoda", new { proizvod = item })<br />
+            <label>-------------------------------------</label><br />
+            
+            // dodan je primjer html.textbox -----> @Html.TextBox("ime","")
+        }
+    </div>
+</body>
+</html>
