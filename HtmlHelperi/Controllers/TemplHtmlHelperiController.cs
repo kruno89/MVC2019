@@ -21,7 +21,7 @@ namespace HtmlHelperi.Controllers
             return View("HtmlLabelDisplay", osoba);
         }
 
-        //GET METODA
+        //GET METODA // skraćena verzija ovog gornjeg
         public ViewResult EditorModelView()
         {
             return View(new OsobaTempl());
