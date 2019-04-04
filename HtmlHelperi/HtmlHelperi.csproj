@@ -95,12 +95,14 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HtmlHelpersController.cs" />
+    <Compile Include="Controllers\MetaDataHtmlHelperiController.cs" />
     <Compile Include="Controllers\TemplHtmlHelperiController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Adresa.cs" />
     <Compile Include="Models\Osoba.cs" />
+    <Compile Include="Models\OsobaMeta.cs" />
     <Compile Include="Models\OsobaTempl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -113,6 +115,11 @@
     <Content Include="Views\TemplHtmlHelperi\HtmlEditorView.cshtml" />
     <Content Include="Views\TemplHtmlHelperi\HtmlLabelDisplay.cshtml" />
     <Content Include="Views\TemplHtmlHelperi\EditorModelView.cshtml" />
+    <Content Include="Views\MetaDataHtmlHelperi\EditorTemplates\TemplMjesta.cshtml" />
+    <Content Include="Views\MetaDataHtmlHelperi\EditorTemplates\TemplSpol.cshtml" />
+    <Content Include="Views\MetaDataHtmlHelperi\MetaDataView.cshtml" />
+    <Content Include="Views\MetaDataHtmlHelperi\HtmlLabelDisplay.cshtml" />
+    <Content Include="Views\MetaDataHtmlHelperi\MetaDataView2.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

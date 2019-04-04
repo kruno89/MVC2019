@@ -1,0 +1,95 @@
+﻿@model HtmlHelperi.Models.OsobaMeta
+@{
+    Layout = null;
+    Html.EnableClientValidation(false);
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MetaDataView</title>
+    <style>
+        label{ display:inline-block; width:150px; margin:10px}
+        .column {float: left; margin:10px;}
+        input[type=submit] {float: left; clear: both; margin-top:10px;}
+    </style>
+</head>
+<body>
+    <div> 
+        @using (Html.BeginForm())
+        {
+            <div class="column">
+                <div>
+                    @Html.Editor("OsobaId")
+                </div>
+                
+                
+
+            <div>
+                <label>Ime:</label>
+                @Html.Editor("Ime")
+            </div>
+
+            <div>
+                <label>Prezime:</label>
+                @Html.EditorFor(x=>x.Prezime)
+            </div>
+
+            <div>
+                <label>Email:</label>
+                @Html.Editor("Email")
+            </div>
+
+            <div>
+                <label>Mjesto stanovanja:</label>
+                @Html.EditorFor(x => x.MjestoStanovanja)
+            </div>
+
+            <div>
+                <label>Spol:</label>
+                @Html.EditorFor(x => x.Spol)
+            </div>
+
+            <div>
+                <label>Zaposlen:</label>
+                @Html.EditorFor(x => x.Zaposlen)
+            </div>
+
+            <div>
+                <label>Datum rođenja:</label>
+                @Html.EditorFor(x => x.DatumRodjenja)
+            </div>
+
+            <div>
+                <label>Napomena:</label>
+                @Html.EditorFor(x => x.Napomena)
+            </div>
+        </div>                  
+
+        <div class="column">
+            <div>
+                <label>Ulica:</label>
+                @Html.EditorFor(x => x.AdresaOsobe.Ulica)
+            </div>
+
+            <div>
+                <label>Kućni broj:</label>
+                @Html.EditorFor(x => x.AdresaOsobe.KucniBroj)
+            </div>
+
+            <div>
+                <label>Kat:</label>
+                @Html.EditorFor(x => x.AdresaOsobe.Kat)
+            </div>
+
+        </div>
+
+        <input type="submit" value="Pošalji"/>
+
+
+        }
+    </div>
+</body>
+</html>

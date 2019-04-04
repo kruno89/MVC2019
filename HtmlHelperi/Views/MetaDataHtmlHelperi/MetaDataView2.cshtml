@@ -1,0 +1,39 @@
+﻿@model HtmlHelperi.Models.OsobaMeta
+@{
+    Layout = null;
+    Html.EnableClientValidation(false);
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MetaDataView2</title>
+    <style>
+        label { display: inline-block; width:150px; margin:10px;}
+        .column{float: left; margin: 10px;}
+        input[type=submit] {float: left; clear: both; margin-top:10px;}
+        .editor-label {clear: left; float: left; margin-top: 10px;}
+        .editor-field {float: left; margin-top: 10px; margin-left: 10px;}
+    </style>
+</head>
+<body>
+    <div> 
+        <h2>@Html.LabelForModel()</h2>
+
+        @using (Html.BeginForm())
+        {
+            <div class="column">
+                @Html.EditorForModel()
+            </div>
+
+            <div class="column">
+                @Html.EditorFor(x=>x.AdresaOsobe)
+            </div>
+
+            <input type="submit" value="Pošalji" />
+        }
+    </div>
+</body>
+</html>
