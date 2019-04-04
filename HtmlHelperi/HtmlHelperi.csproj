@@ -95,10 +95,13 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HtmlHelpersController.cs" />
+    <Compile Include="Controllers\TemplHtmlHelperiController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Adresa.cs" />
     <Compile Include="Models\Osoba.cs" />
+    <Compile Include="Models\OsobaTempl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -107,6 +110,9 @@
     <Content Include="Views\HtmlHelpers\OsnovniHelperi.cshtml" />
     <Content Include="Views\HtmlHelpers\FormHelper.cshtml" />
     <Content Include="Views\HtmlHelpers\StrongTypedHelper.cshtml" />
+    <Content Include="Views\TemplHtmlHelperi\HtmlEditorView.cshtml" />
+    <Content Include="Views\TemplHtmlHelperi\HtmlLabelDisplay.cshtml" />
+    <Content Include="Views\TemplHtmlHelperi\EditorModelView.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
