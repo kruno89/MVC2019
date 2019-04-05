@@ -13,14 +13,15 @@ namespace Validacije.Controllers
         // za povratak na prvi primjer promijeniti naziv u izdavanjeracuna bez 2
         // također promijeniti kraj kod if else
         // naziv promijenjen u Metaizdavanje racuna to ispraviti i odkomentirati ono dolje
-        public ViewResult MetaIzdavanjeRacuna()
+        // promijenjeno u client validaciju
+        public ViewResult ClientMetaIzdavanjeRacuna()
         {
             return View(new MetaRacun() { Datum=DateTime.Now, BrojRacuna = "/" + DateTime.Now.Year.ToString() });
         }
 
         // POST
         [HttpPost]
-        public ViewResult MetaIzdavanjeRacuna(MetaRacun metaRacun)
+        public ViewResult MetaIzdavanjeRacuna(MetaRacun metaRacun, string id)
         {
             ////obavezne vrijednosti
             //if (string.IsNullOrEmpty(racun.BrojRacuna))
@@ -70,9 +71,15 @@ namespace Validacije.Controllers
             }
             else
             {
+                if (id == "ClientMetaIzdavanjeRacuna")
+                {
+                    return View("ClientMetaIzdavanjeRacuna");
+                }
                 return View();
             }
             
         }
+
+        
     }
 }

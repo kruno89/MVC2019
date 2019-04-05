@@ -36,7 +36,8 @@
 
     <script>
         $(document).ready(function () {
-            Globalize.culture("hr-HR"); $.validator.methods.number = function (value, element) {
+            Globalize.culture("hr-HR");
+            $.validator.methods.number = function (value, element) {
                 return this.optional(element) ||
                     !isNaN(Globalize.parseFloat(value));
             }
@@ -49,6 +50,34 @@
                     Globalize.parseDate(value);
             };
 
+        });
+
+        $.validator.setDefaults({ ignore: null });
+        $.validator.addMethod('validdatum', function (value, element, params) {
+            //datum umanjen za 3 dana
+            var currentDateMinusThree = new Date();
+            currentDateMinusThree.setDate(currentDateMinusThree.getDate() - 3);
+            currentDateMinusThree.setHours(0, 0, 0, 0);
+
+            // upisani datum u ispravnom formatu
+            var upisaniDatum = $("#Datum").val();
+            var firstPoint = upisaniDatum.indexOf('.', 0);
+            var secondPoint = upisaniDatum.indexOf('.', firstPoint + 1);
+            var dan = upisaniDatum.substring(0, firstPoint);
+            var mjesec = upisaniDatum.substring(firstPoint + 1, secondPoint);
+            var godina = upisaniDatum.substring(secondPoint + 1, secondPoint + 5);
+            var valueDate = godina + "-" + mjesec + "-" + dan;
+
+            // usporedba
+            if (Date.parse(valueDate) < currentDateMinusThree) {
+                return false;
+            }
+            return true;
+        }, '');
+
+        $.validator.unobtrusive.adapters.add('validdatum', function (options) {
+            options.rules['validdatum'] = {};
+            options.messages['validdatum'] = options.message;
         });
     </script>
 </body>
