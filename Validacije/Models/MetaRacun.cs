@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
 using Validacije.Models.Validacije;
 
 namespace Validacije.Models
@@ -23,5 +24,9 @@ namespace Validacije.Models
         [Range(1,1000, ErrorMessage ="Cijena mora biti unutar intervala [1-1000] !")]
         [DisplayFormat(DataFormatString ="{0:N2}", ApplyFormatInEditMode = true)]
         public decimal Cijena { get; set; }
+
+        [HiddenInput]
+        [NeViseOdTriDana(ErrorMessage ="Datum ne smije biti manji za više od 3 dana!")]
+        public string CustomVal { get; set; }
     }
 }
