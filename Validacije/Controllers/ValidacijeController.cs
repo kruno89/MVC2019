@@ -10,7 +10,8 @@ namespace Validacije.Controllers
     public class ValidacijeController : Controller
     {
         // GET: Validacije
-        // za povratak na prvi primjer promijeniti naziv u izdavanjeracuna bez 2
+        // za povratak na prvi primjer promijeniti naziv u izdavanjeracuna
+        // ovdje unijeti get metodu za izdavanje računa 2
         // također promijeniti kraj kod if else
         // naziv promijenjen u Metaizdavanje racuna to ispraviti i odkomentirati ono dolje
         // promijenjeno u client validaciju
