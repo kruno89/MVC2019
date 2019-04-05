@@ -5,21 +5,12 @@ using System.Web;
 using System.Web.Mvc;
 using Validacije.Models;
 
+
 namespace Validacije.Controllers
 {
     public class ValidacijeController : Controller
     {
         // GET: Validacije
-        // za povratak na prvi primjer promijeniti naziv u izdavanjeracuna
-        // ovdje unijeti get metodu za izdavanje računa 2
-        // također promijeniti kraj kod if else
-        // naziv promijenjen u Metaizdavanje racuna to ispraviti i odkomentirati ono dolje
-        // promijenjeno u client validaciju
-        public ViewResult ClientMetaIzdavanjeRacuna()
-        {
-            return View(new MetaRacun() { Datum = DateTime.Now, BrojRacuna = "/" + DateTime.Now.Year.ToString() });
-        }
-
         public ViewResult IzdavanjeRacuna()
         {
             return View(new Racun() { Datum = DateTime.Now, BrojRacuna = "/" + DateTime.Now.Year.ToString() });
@@ -32,7 +23,12 @@ namespace Validacije.Controllers
 
         public ViewResult MetaIzdavanjeRacuna()
         {
-            return View(new Racun() { Datum = DateTime.Now, BrojRacuna = "/" + DateTime.Now.Year.ToString() });
+            return View(new MetaRacun() { Datum = DateTime.Now, BrojRacuna = "/" + DateTime.Now.Year.ToString() });
+        }
+
+        public ViewResult ClientMetaIzdavanjeRacuna()
+        {
+            return View(new MetaRacun() { Datum = DateTime.Now, BrojRacuna = "/" + DateTime.Now.Year.ToString() });
         }
 
         // POST
@@ -83,8 +79,7 @@ namespace Validacije.Controllers
             }
 
             // ukupna provjera validacije
-            //// ovo promijenti za povratak na prvi primjer 
-            //// ovaj drugi radi i za prvi primjer sa promjenama
+            
             if (ModelState.IsValid)
             {
                 return View("RacunIzdan", racun);
@@ -100,7 +95,8 @@ namespace Validacije.Controllers
                     return View();
                 }
             }
-
         }
+        
+
     }
 }

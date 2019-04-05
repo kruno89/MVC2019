@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
@@ -12,17 +12,15 @@ namespace Validacije.Models.Validacije
         {
             if (value is DateTime && (DateTime)value < DateTime.Today.AddDays(-3))
             {
+                return false;
+                
+            }
+            else if(value is MetaRacun)
+            {
                 MetaRacun mr = (MetaRacun)value;
                 if (mr.Datum < DateTime.Today.AddDays(-3))
                 {
                     return false;
-                }
-                else if(value is MetaRacun )
-                {
-                    if (((MetaRacun)value).Datum < DateTime.Today.AddDays(-3))
-                    {
-                        return false;
-                    }
                 }
             }
             return true;
