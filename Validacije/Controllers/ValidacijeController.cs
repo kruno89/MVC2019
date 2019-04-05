@@ -17,54 +17,29 @@ namespace Validacije.Controllers
         // promijenjeno u client validaciju
         public ViewResult ClientMetaIzdavanjeRacuna()
         {
-            return View(new MetaRacun() { Datum=DateTime.Now, BrojRacuna = "/" + DateTime.Now.Year.ToString() });
+            return View(new MetaRacun() { Datum = DateTime.Now, BrojRacuna = "/" + DateTime.Now.Year.ToString() });
+        }
+
+        public ViewResult IzdavanjeRacuna()
+        {
+            return View(new Racun() { Datum = DateTime.Now, BrojRacuna = "/" + DateTime.Now.Year.ToString() });
+        }
+
+        public ViewResult IzdavanjeRacuna2()
+        {
+            return View(new Racun() { Datum = DateTime.Now, BrojRacuna = "/" + DateTime.Now.Year.ToString() });
+        }
+
+        public ViewResult MetaIzdavanjeRacuna()
+        {
+            return View(new Racun() { Datum = DateTime.Now, BrojRacuna = "/" + DateTime.Now.Year.ToString() });
         }
 
         // POST
         [HttpPost]
         public ViewResult MetaIzdavanjeRacuna(MetaRacun metaRacun, string id)
         {
-            ////obavezne vrijednosti
-            //if (string.IsNullOrEmpty(racun.BrojRacuna))
-            //{
-            //    ModelState.AddModelError("BrojRacuna", "Broj računa je obavezan!");
-            //}
-            //if (string.IsNullOrEmpty(racun.Zaposlenik))
-            //{
-            //    ModelState.AddModelError("Zaposlenik", "Zaposlenik je obavezan!");
-            //}
-            //if (string.IsNullOrEmpty(racun.Kupac))
-            //{
-            //    ModelState.AddModelError("Kupac", "Kupac je obavezan!");
-            //}
 
-            //// model-level validacija
-            //if (ModelState.IsValidField("Datum"))
-            //{
-            //    if (racun.Datum < DateTime.Today.AddDays(-3))
-            //    {
-            //        ModelState.AddModelError("", "Datum ne smije biti manji za više od 3 dana!");
-            //    }
-            //}
-
-            //// ukupna provjera validacije
-            //// ovo promijenti za povratak na prvi primjer 
-            //// ovaj drugi radi i za prvi primjer sa promjenama
-            //if (ModelState.IsValid)
-            //{
-            //    return View("RacunIzdan", racun);
-            //}
-            //else
-            //{
-            //    if (id == "IzdavanjeRacuna2")
-            //    {
-            //        return View("IzdavanjeRacuna2");
-            //    }
-            //    else
-            //    {
-            //        return View();
-            //    }               
-            //}
 
             if (ModelState.IsValid)
             {
@@ -78,9 +53,54 @@ namespace Validacije.Controllers
                 }
                 return View();
             }
-            
+
         }
 
-        
+        [HttpPost]
+        public ViewResult IzdavanjeRacuna(Racun racun, string id)
+        {
+            //obavezne vrijednosti
+            if (string.IsNullOrEmpty(racun.BrojRacuna))
+            {
+                ModelState.AddModelError("BrojRacuna", "Broj računa je obavezan!");
+            }
+            if (string.IsNullOrEmpty(racun.Zaposlenik))
+            {
+                ModelState.AddModelError("Zaposlenik", "Zaposlenik je obavezan!");
+            }
+            if (string.IsNullOrEmpty(racun.Kupac))
+            {
+                ModelState.AddModelError("Kupac", "Kupac je obavezan!");
+            }
+
+            //model-level validacija
+            if (ModelState.IsValidField("Datum"))
+            {
+                if (racun.Datum < DateTime.Today.AddDays(-3))
+                {
+                    ModelState.AddModelError("", "Datum ne smije biti manji za više od 3 dana!");
+                }
+            }
+
+            // ukupna provjera validacije
+            //// ovo promijenti za povratak na prvi primjer 
+            //// ovaj drugi radi i za prvi primjer sa promjenama
+            if (ModelState.IsValid)
+            {
+                return View("RacunIzdan", racun);
+            }
+            else
+            {
+                if (id == "IzdavanjeRacuna2")
+                {
+                    return View("IzdavanjeRacuna2");
+                }
+                else
+                {
+                    return View();
+                }
+            }
+
+        }
     }
 }
