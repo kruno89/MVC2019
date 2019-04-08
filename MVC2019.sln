@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC projekt 6_1_vj", "MVC p
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validacije", "Validacije\Validacije.csproj", "{1816537F-B20D-401B-BD7D-57340C58C107}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADONET_SpajanjeNaBazu", "ADONET_SpajanjeNaBazu\ADONET_SpajanjeNaBazu.csproj", "{6E8F9BBA-4D68-4744-9347-7DB584D44C41}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{1816537F-B20D-401B-BD7D-57340C58C107}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1816537F-B20D-401B-BD7D-57340C58C107}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1816537F-B20D-401B-BD7D-57340C58C107}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E8F9BBA-4D68-4744-9347-7DB584D44C41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E8F9BBA-4D68-4744-9347-7DB584D44C41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E8F9BBA-4D68-4744-9347-7DB584D44C41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E8F9BBA-4D68-4744-9347-7DB584D44C41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
