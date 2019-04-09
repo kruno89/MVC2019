@@ -59,6 +59,7 @@ namespace ADONET_SpajanjeNaBazu.Controllers
             {
                 //Kreiramo upit za izmjenu zapisa u bazi
                 // ako obrišemo id sa brojem 1 svaki idući se mora promijeniti broj ovdje znači idTecaj= neki broj koji zelimo obrisati
+                // ovo gornje vrijedi i za ovaj dio EDIT kao i za DELETE
                 string cmdText = "UPDATE tblTecajevi ";
                 cmdText += "SET naziv='Web programiranje' ";
                 cmdText += "WHERE idTecaj=1";
