@@ -19,7 +19,7 @@ namespace ADONET_SpajanjeNaBazu.Controllers
             //Kreiramo ConnectionString i Connection objekt
             List<Tecaj> lstTecajevi = new List<Tecaj>();
             string connString =
-                 ConfigurationManager.ConnectionStrings["dbAlgebraConnStr"].ConnectionString;
+                 ConfigurationManager.ConnectionStrings["dbAlgebraConnStrSQL"].ConnectionString;
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 string cmdText = "Select * from tblTecajevi";

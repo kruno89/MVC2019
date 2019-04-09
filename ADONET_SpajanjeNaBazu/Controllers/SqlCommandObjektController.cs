@@ -20,14 +20,14 @@ namespace ADONET_SpajanjeNaBazu.Controllers
         {
             //Kreiramo ConnectionString  i Connection objekt
             string connString =
-                ConfigurationManager.ConnectionStrings["dbAlgebraConnStr"].ConnectionString;
+                ConfigurationManager.ConnectionStrings["dbAlgebraConnStrSQL"].ConnectionString;
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 // Kreiramo SQL naredbu za upis u bazu
                 string cmdText = "";
                 cmdText += "INSERT INTO tblTecajevi ";
-                cmdText += "(naziv, opis)";
-                cmdText += "VALUES";
+                cmdText += "(naziv, opis)" ;
+                cmdText += "VALUES ";
                 cmdText += "('Web design', 'Naučite dizajnirati web stranice.') ";
 
                 // Kreiramo Command objekt i otvaramo vezu s bazom
@@ -54,10 +54,11 @@ namespace ADONET_SpajanjeNaBazu.Controllers
         {
             // Kreiramo ConnectionString i Connection objekt
             string connString = 
-                ConfigurationManager.ConnectionStrings["dbAlgebraConnStr"].ConnectionString;
+                ConfigurationManager.ConnectionStrings["dbAlgebraConnStrSQL"].ConnectionString;
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 //Kreiramo upit za izmjenu zapisa u bazi
+                // ako obrišemo id sa brojem 1 svaki idući se mora promijeniti broj ovdje znači idTecaj= neki broj koji zelimo obrisati
                 string cmdText = "UPDATE tblTecajevi ";
                 cmdText += "SET naziv='Web programiranje' ";
                 cmdText += "WHERE idTecaj=1";
@@ -79,12 +80,13 @@ namespace ADONET_SpajanjeNaBazu.Controllers
             // Kreiramo ConnectionString i Connection objekt
             string connString
                 =
-            ConfigurationManager.ConnectionStrings["dbAlgebraConnStr"].ConnectionString;
+            ConfigurationManager.ConnectionStrings["dbAlgebraConnStrSQL"].ConnectionString;
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 // Kreiramo upit za brisanje zapisa iz baze
                 string cmdText = "DELETE FROM tblTecajevi ";
-                cmdText += "WHERE idTecaj=1";
+                cmdText += "WHERE idTecaj=21";
+             
 
                 // Kreiramo Command objekt i otvaramo vezu s bazom
                 SqlCommand cmd = new SqlCommand(cmdText, conn);
@@ -96,6 +98,7 @@ namespace ADONET_SpajanjeNaBazu.Controllers
                 ViewBag.Message = "Broj obrisanih redaka:" + brojObrisanihRedaka.ToString();
                 return View("Index");
             }
+            
         }
 
         public ActionResult Count()
@@ -103,7 +106,7 @@ namespace ADONET_SpajanjeNaBazu.Controllers
             // Kreiramo ConnectionString i Connection objekt
             string connString
                 =
-            ConfigurationManager.ConnectionStrings["dbAlgebraConnStr"].ConnectionString;
+            ConfigurationManager.ConnectionStrings["dbAlgebraConnStrSQL"].ConnectionString;
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 // kreiramo sql naredbu za dohvaćanje jedne vrijednosti iz baze
