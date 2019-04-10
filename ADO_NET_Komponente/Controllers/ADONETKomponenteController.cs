@@ -44,7 +44,7 @@ namespace ADO_NET_Komponente.Controllers
                         {
                             // Kreiramo novi PolaznikModel objekt, inicijaliziramo ga i dodajemo na listu lstPolaznici
                             PolaznikModel polaznik = new PolaznikModel();
-                            int.Parse(dr["IdPolaznik"].ToString());
+                            polaznik.IdPolaznik = int.Parse(dr["IdPolaznik"].ToString());
                             polaznik.Ime = dr["Ime"].ToString();
                             polaznik.Prezime = dr["Prezime"].ToString();
                             polaznik.Email = dr["Email"].ToString();
@@ -81,7 +81,7 @@ namespace ADO_NET_Komponente.Controllers
             SqlConnection conn = new SqlConnection(connStr);
 
             // Kreiramo SQL naredbu
-            string cmdText = "SELECT * FROM tblPolaznici WHERE IdPolaznik=@IdPolaznik";
+            string cmdText = "SELECT * FROM tblPolaznici WHERE IdPolaznik = @IdPolaznik";
 
             // Kreiramo SqlCommand objekt
             SqlCommand cmd = new SqlCommand(cmdText, conn);
@@ -236,6 +236,8 @@ namespace ADO_NET_Komponente.Controllers
         [HttpPost]
         public ActionResult Edit(PolaznikModel model)
         {
+            //string Message = model.IdPolaznik.ToString();
+            
             try
             {
                 using(SqlConnection conn=new SqlConnection(connStr))
@@ -246,10 +248,12 @@ namespace ADO_NET_Komponente.Controllers
                     cmdText += "SET Ime ='" + model.Ime + "', Prezime='" + model.Prezime + "', Email='" + model.Email + "', DatumRodjenja=" + model.DatumRodjenja.ToString("yyyy-MM-dd") + " ";
                     cmdText += "WHERE IdPolaznik=" + model.IdPolaznik;
 
+                    
                     // Kreiramo Command objekt i otvaramo vezu s bazom
                     SqlCommand cmd = new SqlCommand(cmdText, conn);
                     cmd.Connection.Open();
 
+                    //Response.Write(model.IdPolaznik);
                     // kOmandu izvršavamo metodom ExecuteNonQuery
                     // Ako je zapis upisan u bazu, baza vraća 1 (jer je upisan jedan redak)
 
@@ -261,6 +265,7 @@ namespace ADO_NET_Komponente.Controllers
                     else
                     {
                         ViewBag.Message = "Dogodila se greška!";
+                        //ViewBag.Message = Message;
                     }
                 }
             }
