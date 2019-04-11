@@ -240,6 +240,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Kontakt\Index.cshtml" />
     <Content Include="Views\Kontakt\Details.cshtml" />
+    <Content Include="Views\Kontakt\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
