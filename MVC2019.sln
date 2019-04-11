@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADO_NET_Komponente", "ADO_N
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adresar", "Adresar\Adresar.csproj", "{3391E8C7-B7C9-4A37-AB37-3857099023CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adresar2", "Adresar2\Adresar2.csproj", "{4C812157-FCDC-4FC1-92DA-E3573ECA1AC3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,10 @@ Global
 		{3391E8C7-B7C9-4A37-AB37-3857099023CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3391E8C7-B7C9-4A37-AB37-3857099023CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3391E8C7-B7C9-4A37-AB37-3857099023CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C812157-FCDC-4FC1-92DA-E3573ECA1AC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C812157-FCDC-4FC1-92DA-E3573ECA1AC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C812157-FCDC-4FC1-92DA-E3573ECA1AC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C812157-FCDC-4FC1-92DA-E3573ECA1AC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
