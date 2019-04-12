@@ -29,5 +29,11 @@ namespace WebShop.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<WebShop.Models.Korisnici> Korisnicis { get; set; }
+
+        public System.Data.Entity.DbSet<WebShop.Models.NarudzbeDetalji> NarudzbeDetaljis { get; set; }
+
+        public System.Data.Entity.DbSet<WebShop.Models.Narudzbe> Narudzbes { get; set; }
     }
 }
