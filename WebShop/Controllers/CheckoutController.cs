@@ -44,6 +44,8 @@ namespace WebShop.Controllers
             narudzba.DatumVrijemeDostave =
                 Convert.ToDateTime(DateTime.Now.AddDays(7).ToString("yyyy-MM-dd"));
             narudzba.JeDostavljeno = false;
+            narudzba.Prezime = korisnici.Prezime;
+            narudzba.Email = korisnici.Email;
             db.Narudzbes.Add(narudzba);
             db.SaveChanges();
 
