@@ -29,5 +29,7 @@ namespace Ispit_MVC.Models
         {
             return new ApplicationDbContext();
         }
+
+        public virtual DbSet<Poklon> Pokloni { get; set; }
     }
 }
