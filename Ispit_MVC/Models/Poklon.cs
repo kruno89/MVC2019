@@ -18,6 +18,6 @@ namespace Ispit_MVC.Models
         [StringLength(25)]
         public string Kolicina { get; set; }
 
-        public bool Dostupan { get; set; }
+        public bool Kupljen { get; set; }
     }
 }

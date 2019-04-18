@@ -1,13 +1,9 @@
 ﻿@model IEnumerable<Ispit_MVC.Models.Poklon>
 
-@{ 
-    ViewBag.Title = "Svi pokloni";
-}
-
-<h2>Nekupljeni pokloni</h2>
+<h2>Svi pokloni</h2>
 
 <p>
-    @Html.ActionLink("Svi pokloni", "CompletePoklonList") |
+    @Html.ActionLink("Nekupljeni pokloni","Index") |
     @Html.ActionLink("Dodaj poklon", "Create")
 </p>
 <table class="table">
@@ -42,9 +38,9 @@
             @Html.DisplayFor(modelItem => item.Kupljen)
         </td>
         <td>
-            @Html.ActionLink("Uredi", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Detalji", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Briši", "Delete", new { id=item.Id })
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
         </td>
     </tr>
 }

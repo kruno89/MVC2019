@@ -16,11 +16,17 @@ namespace Ispit_MVC.Controllers
         // GET: Poklon
         public ActionResult Index()
         {
-            List<Poklon> dostupan = (from p in _db.Pokloni where p.Dostupan select p).ToList();
+            List<Poklon> dostupan = (from p in _db.Pokloni where p.Kupljen == false select p).ToList();
 
             return View(dostupan);
         }
 
+        // GET: svi pokloni
+        public ActionResult CompletePoklonList()
+        {
+            List<Poklon> lPokloni = (from p in _db.Pokloni select p).ToList();
+            return View(lPokloni);
+        }
         // GET: Poklon/Details/5
         public ActionResult Details(int? id)
         {
